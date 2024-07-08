@@ -12,6 +12,7 @@ const { JWT_SECRET } = process.env;
 export function generateToken(userId) {
   const accessToken = jwt.sign({ sub: userId }, JWT_SECRET, {
     expiresIn: "90 days",
+    algorithm: 'HS256'
   });
 
   return { accessToken };

@@ -15,6 +15,7 @@ export async function signup(req, res, next) {
   try {
     const validatedData = await signupSchema.validateAsync(req.body);
     const newUser = await repository.createUser(validatedData);
+    console.log(newUser.userId);
 
     if (!newUser)
       return res.status(400).json({
