@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "API is running..." });
 });
 
-app.use("/api/auth", auth);
+app.use("/auth", auth);
 app.use("/api/users", user);
 app.use("/api/organisations", organisation);
 
