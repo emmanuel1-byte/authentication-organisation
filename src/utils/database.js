@@ -20,12 +20,12 @@ export const sequelize = new Sequelize(
     port: DATABASE_PORT,
     dialect: "postgres",
     logging: false,
-    // dialectOptions: {
-    //   ssl: {
-    //     rejectUnauthorized: true,
-    //     ca: CA_CERT.replace(/\\n/g, "\n"),
-    //   },
-    // },
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: true,
+        ca: CA_CERT.replace(/\\n/g, "\n"),
+      },
+    },
   }
 );
 
